@@ -1,20 +1,19 @@
 package user
 
 import (
-    "fmt"
-   "encoding/json"
+	"encoding/json"
+	"fmt"
 )
 
 type User struct {
 	Name string
-    Age int
-    
+	Age  int
 }
 
 func (u User) String() string {
-        b, err :=json.Marshal(u)
-        if err != nil {
-            fmt.Println(err)
-        }
-        return string(b);
+	b, err := json.Marshal(u)
+	if err != nil {
+		fmt.Println(err)
+	}
+	return string(b)
 }
