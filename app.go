@@ -1,0 +1,23 @@
+package main
+
+import (
+  "fmt"
+  "net/http"
+  "./model"
+)
+
+
+func hello(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprintf(w, "Hello, World!")
+}
+
+func getUser(w http.ResponseWriter, r *http.Request){
+    fmt.Fprintf(w, user.GetUser().String());
+}
+
+ 
+func main() {
+    http.HandleFunc("/", hello)
+    http.HandleFunc("/user/", getUser)
+    http.ListenAndServe(":8080", nil)
+}
