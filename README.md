@@ -12,5 +12,5 @@ Sapikelios's Simple go Microservice Example
     
 ### Resources
 
-    http://localhost:8080/  ---> returns "Hello, World!"
-    http://localhost:8080/user  ---> returns my personal info { Name: "Carlos Castillo", Age: 24 }
+    GET http://localhost:8080/  ---> returns "Hello, World!"
+    GET http://localhost:8080/user  ---> returns my personal info { Name: "Carlos Castillo", Age: 24 }
